@@ -292,60 +292,60 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 
 ######################################################################################################
 
-fact_sheet_chair = """
-VISIÓN GENERAL
-- Parte de una hermosa familia de muebles de oficina de inspiración de mediados de siglo, 
-que incluye archivadores, escritorios, librerías, mesas de reuniones y mucho más.
-- Varias opciones de color de carcasa y acabados de base.
-- Disponible con respaldo de plástico y tapizado frontal (SWC-100) 
-o tapizado completo (SWC-110) en 10 opciones de tela y 6 de piel.
-- Las opciones de acabado de la base son: acero inoxidable, negro mate 
-blanco brillante o cromado.
-- La silla está disponible con o sin reposabrazos.
-- Adecuada para uso doméstico o profesional.
-- Apta para uso contractual.
+# fact_sheet_chair = """
+# VISIÓN GENERAL
+# - Parte de una hermosa familia de muebles de oficina de inspiración de mediados de siglo, 
+# que incluye archivadores, escritorios, librerías, mesas de reuniones y mucho más.
+# - Varias opciones de color de carcasa y acabados de base.
+# - Disponible con respaldo de plástico y tapizado frontal (SWC-100) 
+# o tapizado completo (SWC-110) en 10 opciones de tela y 6 de piel.
+# - Las opciones de acabado de la base son: acero inoxidable, negro mate 
+# blanco brillante o cromado.
+# - La silla está disponible con o sin reposabrazos.
+# - Adecuada para uso doméstico o profesional.
+# - Apta para uso contractual.
 
-CONSTRUCCIÓN
-- Base de aluminio plastificado de 5 ruedas.
-- Ajuste neumático de la silla para subir/bajar fácilmente.
+# CONSTRUCCIÓN
+# - Base de aluminio plastificado de 5 ruedas.
+# - Ajuste neumático de la silla para subir/bajar fácilmente.
 
-DIMENSIONES
-- ANCHO 53 CM | 20.87"
-- PROFUNDIDAD 51 CM | 20.08"
-- ALTURA 80 CM | 31.50"
-- ALTURA DEL ASIENTO 44 CM | 17.32"
-- PROFUNDIDAD DEL ASIENTO 41 CM | 16.14"
+# DIMENSIONES
+# - ANCHO 53 CM | 20.87"
+# - PROFUNDIDAD 51 CM | 20.08"
+# - ALTURA 80 CM | 31.50"
+# - ALTURA DEL ASIENTO 44 CM | 17.32"
+# - PROFUNDIDAD DEL ASIENTO 41 CM | 16.14"
 
-OPCIONES
-- Opciones de ruedas para suelo blando o duro.
-- Dos opciones de densidades de espuma de asiento: 
- media (1,8 lb/ft3) o alta (2,8 lb/ft3)
-- Reposabrazos de PU de 8 posiciones o sin brazos 
+# OPCIONES
+# - Opciones de ruedas para suelo blando o duro.
+# - Dos opciones de densidades de espuma de asiento: 
+#  media (1,8 lb/ft3) o alta (2,8 lb/ft3)
+# - Reposabrazos de PU de 8 posiciones o sin brazos 
 
-MATERIALES
-CARCASA BASE DESLIZANTE
-- Aluminio fundido con revestimiento de nailon modificado PA6/PA66.
-- Grosor de la carcasa: 10 mm.
-ASIENTO
-- Espuma HD36
+# MATERIALES
+# CARCASA BASE DESLIZANTE
+# - Aluminio fundido con revestimiento de nailon modificado PA6/PA66.
+# - Grosor de la carcasa: 10 mm.
+# ASIENTO
+# - Espuma HD36
 
-PAÍS DE ORIGEN
-- Italia
-"""
+# PAÍS DE ORIGEN
+# - Italia
+# """
 
-prompt = f"""
-Su tarea consiste en ayudar a un equipo de marketing a crear una 
-descripción de un producto para un sitio web 
-en una ficha técnica.
+# prompt = f"""
+# Su tarea consiste en ayudar a un equipo de marketing a crear una 
+# descripción de un producto para un sitio web 
+# en una ficha técnica.
 
-Escriba una descripción del producto basada en la información 
-proporcionada en la ficha técnica delimitada por 
-triple punto y coma.
+# Escriba una descripción del producto basada en la información 
+# proporcionada en la ficha técnica delimitada por 
+# triple punto y coma.
 
-Ficha técnica: ```{fact_sheet_chair}```
-"""
-response = get_completion(prompt)
-print(response)
+# Ficha técnica: ```{fact_sheet_chair}```
+# """
+# response = get_completion(prompt)
+# print(response)
 
 
 # prompt = f"""
@@ -371,35 +371,35 @@ print(response)
 # response = get_completion(prompt)
 # print(response)
 
-aviso = f"""
-Su tarea es ayudar a un equipo de marketing a crear un
-descripción para un sitio web minorista de un producto basado
-en una ficha técnica.
+# aviso = f"""
+# Su tarea es ayudar a un equipo de marketing a crear un
+# descripción para un sitio web minorista de un producto basado
+# en una ficha técnica.
 
-Escriba una descripción del producto basada en la información.
-previsto en las especificaciones técnicas delimitadas por
-triples tildes.
+# Escriba una descripción del producto basada en la información.
+# previsto en las especificaciones técnicas delimitadas por
+# triples tildes.
 
-La descripción está destinada a minoristas de muebles,
-por lo que debe ser de naturaleza técnica y centrarse en la
-materiales con los que está construido el producto.
+# La descripción está destinada a minoristas de muebles,
+# por lo que debe ser de naturaleza técnica y centrarse en la
+# materiales con los que está construido el producto.
 
-Al final de la descripción, incluya cada 7 caracteres
-Identificación del producto en la especificación técnica.
+# Al final de la descripción, incluya cada 7 caracteres
+# Identificación del producto en la especificación técnica.
 
-Después de la descripción, incluya una tabla que dé la
-dimensiones del producto. La tabla debe tener dos columnas.
-En la primera columna incluya el nombre de la dimensión.
-En la segunda columna incluya las medidas en pulgadas solamente.
+# Después de la descripción, incluya una tabla que dé la
+# dimensiones del producto. La tabla debe tener dos columnas.
+# En la primera columna incluya el nombre de la dimensión.
+# En la segunda columna incluya las medidas en pulgadas solamente.
 
-Asigne a la tabla el título 'Dimensiones del producto'.
+# Asigne a la tabla el título 'Dimensiones del producto'.
 
-Formatee todo como HTML que se pueda usar en un sitio web.
-Coloque la descripción en un elemento <div>.
+# Formatee todo como HTML que se pueda usar en un sitio web.
+# Coloque la descripción en un elemento <div>.
 
-Especificaciones técnicas: ```{fact_sheet_chair}```
-"""
+# Especificaciones técnicas: ```{fact_sheet_chair}```
+# """
 
-response = get_completion(prompt)
-print (response)
-display(HTML(response))
+# response = get_completion(prompt)
+# print (response)
+# display(HTML(response))
